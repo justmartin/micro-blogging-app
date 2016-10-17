@@ -49,8 +49,14 @@ post "/update-account" do
 								   last_name: params[:last_name], 
 								   email: params[:email],
 								   password: params[:password])
+	redirect "/account-settings"
 end
 
+post "/delete-account" do
+	@current_user = User.find(session[:user_id])
+	@current_user.destroy
+	redirect "/"
+end
 
 
 
