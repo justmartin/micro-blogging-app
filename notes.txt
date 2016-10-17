@@ -1,3 +1,4 @@
+==================================== DONE
 "/"
 -form
 	email input
@@ -5,7 +6,7 @@
 	login button
 	sign up button
 
-====================================
+==================================== DONE
 sign-up button -> "/sign-up"
 -form
 	firstname
@@ -14,13 +15,17 @@ sign-up button -> "/sign-up"
 	password
 	submit button
 
-====================================
+==================================== 
 login button -> "/home"
 	-users section
 	-latest posts section
 	-add new post section
 
-====================================
+==================================== DONE
+sign out anchor -> "/"
+	-clears current session
+
+==================================== DONE
 "/account-settings"
 -form
 	firstname
@@ -30,18 +35,27 @@ login button -> "/home"
 	update
 	delete
 
-====================================
-".profile"
--current user details
--current user posts
+==================================== 
+"/profile"
+	-current user details
+	-current user posts
 
-====================================
+==================================== DONE
 Users table
-id
-fname
-lname
-email
-password
+	id
+	fname
+	lname
+	email
+	password
 
 ====================================
 Posts table
+
+
+
+
+
+
+
+
+
