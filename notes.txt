@@ -48,10 +48,13 @@ Users table
 	email
 	password
 
-====================================
+==================================== DONE
 Posts table
-
-
+	id
+	title
+	message
+	created at
+	updated at
 
 
 

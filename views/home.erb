@@ -10,7 +10,7 @@
       <h4>Users</h4>
       <ul>
         <% @users.each do |user| %>
-          <li><%= user.first_name + " " + user.last_name %></li> 
+          <a href="/<%= user.id %>"><li><%= user.first_name + " " + user.last_name %></li></a>
         <% end %>
       </ul>
     </div>

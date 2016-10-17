@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile</title>
+</head>
+<body>
+	<div class="row">
+		<%= @user.first_name + " " + @user.last_name %>
+		<br>
+		<%= @user.email %>
+	</div>
+
+	<div class="row">
+		<% @posts.each do |post| %>
+	    Title: <%= post.title %>
+	    <br>
+	    Created At: <%= post.created_at %>
+	    <br>
+	    Message: <%= post.message %>
+		<% end %>
+	</div>
+
+</body>
+</html>
+

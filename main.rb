@@ -79,6 +79,11 @@ get "/profile" do
 	erb :profile
 end
 
+get "/:user_id" do
+	@user = User.find(params[:user_id])
+	@posts = @user.posts.reverse
+	erb :user_profile
+end
 
 
 
