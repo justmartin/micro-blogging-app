@@ -36,10 +36,9 @@
   </div>
 
   <div class="row">
-  <h4>Feed</h4>
+    <h4>Feed</h4>
 
     <% @posts.take(10).each do |post| %>
-
       <div>
         Title: <%= post.title %>
         <br>
@@ -48,8 +47,8 @@
         Message: <%= post.message %>
       </div>
       <br>
-
     <% end %>
+
   </div>
 
 </body>

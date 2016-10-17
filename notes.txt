@@ -35,7 +35,7 @@ sign out anchor -> "/"
 	update
 	delete
 
-==================================== 
+==================================== DONE
 "/profile"
 	-current user details
 	-current user posts

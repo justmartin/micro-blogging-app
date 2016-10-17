@@ -73,15 +73,11 @@ post "/post-blog" do
 	redirect "/home"
 end
 
-
-
-
-#used to get URL 
-# helpers do
-#   def base_url
-#     @base_url ||= "#{request.env['rack.url_scheme']}://#{request.env['HTTP_HOST']}"
-#   end
-# end
+get "/profile" do
+	@current_user = User.find(session[:user_id])
+	@posts = @current_user.posts.reverse
+	erb :profile
+end
 
 
 
