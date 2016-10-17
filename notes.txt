@@ -1,26 +1,26 @@
 "/"
--email input
--password input
--login button
--sign up button
+-form
+	email input
+	password input
+	login button
+	sign up button
 
+====================================
 sign-up button -> "/sign-up"
 -form
 	firstname
 	lastname
 	email
 	password
-	submit
+	submit button
 
-
+====================================
 login button -> "/home"
--users section
+	-users section
+	-latest posts section
+	-add new post section
 
--latest posts section
-
--add new post section
-
-
+====================================
 "/account-settings"
 -form
 	firstname
@@ -30,11 +30,12 @@ login button -> "/home"
 	update
 	delete
 
+====================================
 ".profile"
 -current user details
 -current user posts
 
-
+====================================
 Users table
 id
 fname
@@ -42,4 +43,5 @@ lname
 email
 password
 
+====================================
 Posts table
