@@ -13,6 +13,7 @@ end
 
 get "/home" do
 	@users = User.all
+	@posts = Post.all.reverse
 	erb :home
 end
 
@@ -46,9 +47,9 @@ end
 post "/update-account" do
 	@current_user = User.find(session[:user_id])
 	@current_user.update_columns(first_name: params[:first_name], 
-								   last_name: params[:last_name], 
-								   email: params[:email],
-								   password: params[:password])
+								   						 last_name: params[:last_name], 
+								  						 email: params[:email],
+								   						 password: params[:password])
 	redirect "/account-settings"
 end
 
@@ -65,11 +66,22 @@ get "/sign-out" do
 	redirect "/"
 end
 
-helpers do
-  def base_url
-    @base_url ||= "#{request.env['rack.url_scheme']}://#{request.env['HTTP_HOST']}"
-  end
+post "/post-blog" do
+	Post.create(user_id: session[:user_id],
+							title: params[:title],
+							message: params[:message])
+	redirect "/home"
 end
+
+
+
+
+#used to get URL 
+# helpers do
+#   def base_url
+#     @base_url ||= "#{request.env['rack.url_scheme']}://#{request.env['HTTP_HOST']}"
+#   end
+# end
 
 
 

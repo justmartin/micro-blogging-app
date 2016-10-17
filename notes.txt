@@ -15,10 +15,10 @@ sign-up button -> "/sign-up"
 	password
 	submit button
 
-==================================== 
+==================================== DONE
 login button -> "/home"
 	-users section
-	-latest posts section
+	-posts section
 	-add new post section
 
 ==================================== DONE

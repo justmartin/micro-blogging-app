@@ -5,12 +5,52 @@
 </head>
 <body>
 
-	<h4>Users</h4>
-	<ul>
-		<% @users.each do |user| %>
-			<li><%= user.first_name + " " + user.last_name %></li> 
-		<% end %>
-	</ul>
-  
+  <div class="row">
+    <div class="col s4">
+      <h4>Users</h4>
+      <ul>
+        <% @users.each do |user| %>
+          <li><%= user.first_name + " " + user.last_name %></li> 
+        <% end %>
+      </ul>
+    </div>
+
+    <h4>Post New Blog</h4>
+    <form method="post" action="/post-blog" class="col s8">
+      <div class="row">
+        <div class="input-field col s8">
+          <label for="title">Title</label>
+          <input name="title" type="text" class="validate" maxlength="50">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s8">
+          <label for="message">Message</label>
+          <textarea name="message" type="text" class="materialize-textarea" maxlength="150"></textarea>
+        </div>
+      </div>
+
+      <button class="btn waves-effect waves-light" type="submit">Post</button>
+    </form>
+  </div>
+
+  <div class="row">
+  <h4>Feed</h4>
+
+    <% @posts.take(10).each do |post| %>
+
+      <div>
+        Title: <%= post.title %>
+        <br>
+        Created At: <%= post.created_at %>
+        <br>
+        Message: <%= post.message %>
+      </div>
+      <br>
+
+    <% end %>
+  </div>
+
 </body>
 </html>
