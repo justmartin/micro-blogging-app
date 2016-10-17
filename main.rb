@@ -15,6 +15,10 @@ get "/home" do
 	erb :home
 end
 
+get "/sign_up" do
+	erb :sign_up
+end
+
 post "/sign-in" do
 	@user = User.where(email: params[:email], password: params[:password]).first
 
@@ -25,5 +29,10 @@ post "/sign-in" do
 	else
 		flash[:alert] = "Sign in failed. If you don't have an account, Sign Up!"
 	end
+end
 
+post "/sign-up" do
+	@user = User.create(params)
+	flash[:notice] = "Thanks for signing up! You can now login"
+	redirect "/"
 end
