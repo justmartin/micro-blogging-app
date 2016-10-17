@@ -58,6 +58,12 @@ post "/delete-account" do
 	redirect "/"
 end
 
+get "/sign-out" do
+	p session
+	session.clear
+	p session
+	redirect "/"
+end
 
 
 
