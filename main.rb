@@ -37,3 +37,28 @@ post "/sign-up" do
 	flash[:notice] = "Thanks for signing up! You can now login"
 	redirect "/"
 end
+
+get "/account-settings" do
+	@current_user = User.find(session[:user_id])
+	erb :account_settings
+end
+
+post "/update-account" do
+	@current_user = User.find(session[:user_id])
+	@current_user.update_columns(first_name: params[:first_name], 
+								   last_name: params[:last_name], 
+								   email: params[:email],
+								   password: params[:password])
+end
+
+
+
+
+
+
+
+
+
+
+
+

@@ -4,7 +4,19 @@
 	<title>Home</title>
 </head>
 <body>
-	<h3>User Names</h3>
+	<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Micro-Blog</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      	<li><a href="/home">Home</a></li>
+        <li><a href="">Profile</a></li>
+        <li><a href="/account-settings">My Account</a></li>
+        <li><a href="">Sign-Out</a></li>
+      </ul>
+    </div>
+  </nav>
+
+	<h4>Users</h4>
 	<ul>
 		<% @users.each do |user| %>
 			<li><%= user.first_name + " " + user.last_name %></li> 

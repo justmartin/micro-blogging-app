@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Account</title>
+</head>
+<body>
+
+	<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Micro-Blog</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      	<li><a href="/home">Home</a></li>
+        <li><a href="">Profile</a></li>
+        <li><a href="/account-settings">My Account</a></li>
+        <li><a href="">Sign-Out</a></li>
+      </ul>
+    </div>
+  </nav>
+
+	<form method="post" action="/update-account" class="col s12">
+		<div class="row">
+			<div class="input-field col s6">
+				<label for="first_name">First Name</label>
+				<input name="first_name" type="text" class="validate" placeholder="<%= @current_user.first_name %>">
+ 			</div>
+
+			<div class="input-field col s6">
+				<label for="last_name">Last Name</label>
+				<input name="last_name" type="text" class="validate" placeholder="<%= @current_user.last_name %>">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="input-field col s6">
+				<label for="email">Email</label>
+				<input name="email" type="email" class="validate" placeholder="<%= @current_user.email %>">
+			</div>
+
+			<div class="input-field col s6">
+				<label for="password">Password</label>
+				<input name="password" type="password" class="validate" placeholder="<%= @current_user.password %>">
+			</div>
+		</div>
+
+	  <button class="btn waves-effect waves-light" type="submit">Update Account</button>
+	</form>
+
+</body>
+</html>
