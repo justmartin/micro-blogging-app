@@ -30,6 +30,7 @@ post "/sign-in" do
 		redirect "/home"
 	else
 		flash[:alert] = "Sign in failed. If you don't have an account, Sign Up!"
+		redirect "/"
 	end
 end
 
@@ -90,10 +91,3 @@ post "/delete-post" do
 	post.destroy
 	redirect "/home"
 end
-
-
-
-
-
-
-
