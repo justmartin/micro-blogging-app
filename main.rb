@@ -85,6 +85,12 @@ get "/:user_id" do
 	erb :user_profile
 end
 
+post "/delete-post" do
+	post = Post.find(params[:id])
+	post.destroy
+	redirect "/home"
+end
+
 
 
 

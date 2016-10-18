@@ -48,9 +48,10 @@
               </div>
               <br>
           </div>
-          <div class="card-action">
-            <a href="#">Delete</a>
-          </div>
+          <form method="post" action="/delete-post" class="card-action">
+            <input type="hidden" name="id" value="<%= post.id %>">
+            <button class="btn waves-effect waves-light" type="submit">Delete</button>
+          </form>
         </div>
       <% end %>
     </div>
