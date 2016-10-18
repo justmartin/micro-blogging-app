@@ -1,24 +1,8 @@
-html{
+.dark-body{
 	background-color: #192A51;
 	color: #F5E6E8;
 }
 
-.container{
-	width: 40%;
-}
-
-#sign-in{
-	margin-top: 40%;
-}
-
-/* label color */
-.input-field label {
+.input-field label{
 	color: #F5E6E8;
-}
-
-input[type=text]:focus:not([readonly]),
-input[type=password]:focus:not([readonly]),
-input[type=email]:focus:not([readonly]) {
-  border-bottom: 1px solid #AAA1C8;
-  box-shadow: 0 1px 0 0 #AAA1C8;
 }

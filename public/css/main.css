@@ -9,3 +9,46 @@ nav {
 .btn:hover, .btn-large:hover{
 	background-color: #D5C6E0;
 }
+
+
+/*home.erb*/
+.card-color {
+	background-color: #192A51;
+}
+
+.card-text-color {
+	color: #F5E6E8;
+}
+
+/*index.erb*/
+
+
+.container{
+	width: 40%;
+}
+
+#sign-in{
+	margin-top: 40%;
+}
+
+/* label color */
+.input-field label {
+	color: #192A51;
+}
+
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]) {
+  border-bottom: 1px solid #AAA1C8;
+  box-shadow: 0 1px 0 0 #AAA1C8;
+}
+
+/*account_settings.erb*/
+#account-form{
+	margin: 50px;
+}
+
+#delete-form{
+	margin: 0px;
+	padding: 0px;
+}
