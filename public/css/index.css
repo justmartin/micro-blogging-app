@@ -1,5 +1,6 @@
 html{
 	background-color: #192A51;
+	color: #F5E6E8;
 }
 
 .container{
@@ -8,7 +9,6 @@ html{
 
 #sign-in{
 	margin-top: 40%;
-	color: #F5E6E8;
 }
 
 /* label color */
@@ -16,6 +16,7 @@ html{
 	color: #F5E6E8;
 }
 
+input[type=text]:focus:not([readonly]),
 input[type=password]:focus:not([readonly]),
 input[type=email]:focus:not([readonly]) {
   border-bottom: 1px solid #AAA1C8;
