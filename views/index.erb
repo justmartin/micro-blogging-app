@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Micro-Blogging App</title>
-	</head>
-	<body>
+<head>
+	<title>Micro-Blogging App</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+<div class="container">
 
-		<div class="row">
-			<form method="post" action="/sign-in" class="col s12">
-				<div class="row">
-					<div class="input-field col s12">
-						<label for="email">Email</label>
-						<input name="email" type="email" class="validate">
-					</div>
+	<div class="row">
+		<form id="sign-in" method="post" action="/sign-in" class="col s12 center-align">
+			<div class="row">
+				<div class="input-field col s12">
+					<label for="email">Email</label>
+					<input name="email" type="email" class="validate">
 				</div>
+			</div>
 
-				<div class="row">
-					<div class="input-field col s12">
-						<label for="password">Password</label>
-						<input name="password" type="password" class="validate">
-					</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<label for="password">Password</label>
+					<input name="password" type="password" class="validate">
 				</div>
+			</div>
 
-			  <button class="btn waves-effect waves-light" type="submit">Login</button>
-			</form>
+		  <button class="btn waves-effect waves-light" type="submit">Login</button>
+		</form>
+	</div>
 
-			<form action="/sign_up">
-				<button class="btn waves-effect waves-light" type="">Sign Up</button>
-			</form>
-		</div>
-		
-	</body>
+	<div class="row">
+		<form id="sign-up" action="/sign_up" class="center-align">
+			<button class="btn waves-effect waves-light" type="">Sign Up</button>
+		</form>
+	</div>
+
+</div>
+</body>
 </html>

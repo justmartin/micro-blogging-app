@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Profile</title>
-	</head>
-	<body>
+<head>
+	<title>Profile</title>
+</head>
+<body>
 
-	Name: <%= @current_user.first_name + " " + @current_user.last_name %>
-	<br>
-	Email: <%= @current_user.email %>
-	<br>
+	<div class="row">
+		Name: <%= @current_user.first_name + " " + @current_user.last_name %>
+		<br>
+		Email: <%= @current_user.email %>
+		<br>
+	</div>
 
-	All Posts: 
-	<% @posts.each do |post| %>
-	    Title: <%= post.title %>
-	    <br>
-	    Created At: <%= post.created_at %>
-	    <br>
-	    Message: <%= post.message %>
-	<% end %>
-
-	</body>
+	<div class="row">
+		All Posts: 
+		<% @posts.each do |post| %>
+		    Title: <%= post.title %>
+		    <br>
+		    Created At: <%= post.created_at %>
+		    <br>
+		    Message: <%= post.message %>
+		<% end %>
+	</div>
+	
+</body>
 </html>

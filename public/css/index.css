@@ -1,0 +1,27 @@
+html{
+	background-color: #192A51;
+}
+
+.container{
+	width: 40%;
+}
+
+#sign-in{
+	margin-top: 40%;
+	color: #F5E6E8;
+}
+
+.btn, .btn-large {
+	background-color: #967AA1;
+}
+
+/* label color */
+.input-field label {
+	color: #F5E6E8;
+}
+
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]) {
+  border-bottom: 1px solid #AAA1C8;
+  box-shadow: 0 1px 0 0 #AAA1C8;
+}

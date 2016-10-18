@@ -27,7 +27,7 @@
       <div class="row">
         <div class="input-field col s8">
           <label for="message">Message</label>
-          <textarea name="message" type="text" class="materialize-textarea" maxlength="150"></textarea>
+          <textarea name="message" type="text" class="materialize-textarea" maxlength="150" length="150"></textarea>
         </div>
       </div>
 
@@ -41,6 +41,8 @@
     <% @posts.take(10).each do |post| %>
       <div>
         Title: <%= post.title %>
+        <br>
+        Created By: <%= post.user.first_name %>
         <br>
         Created At: <%= post.created_at %>
         <br>
