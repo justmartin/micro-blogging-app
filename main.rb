@@ -3,9 +3,12 @@ require "sinatra"
 require "sinatra/activerecord"
 require "./models"
 require "sinatra/flash"
-set :database, "sqlite3:micro_blogging_app.sqlite3"
 enable :sessions
 set :sessions, true
+
+configure(:development) do
+  set :database, "sqlite3:micro_blogging_app.sqlite3"
+end
 
 get "/" do
 	erb :index
