@@ -5,7 +5,7 @@
   <link rel="stylesheet" type="text/css" href="css/home.css">
 </head>
 <body>
-
+<h3 class="center-align">Hello, <%= current_user.first_name %>! </h3>
   <div class="row">
 
     <div class="col s2">
@@ -22,12 +22,12 @@
 
         <div class="input-field col s9">
           <label for="title">Title</label>
-          <input name="title" type="text" class="validate" maxlength="50">
+          <input name="title" type="text" class="validate" maxlength="50" required>
         </div>
 
         <div class="input-field col s9">
           <label for="message">Message</label>
-          <textarea name="message" type="text" class="materialize-textarea" maxlength="150" length="150"></textarea>
+          <textarea name="message" type="text" class="materialize-textarea" maxlength="150" length="150" required></textarea>
 
           <button class="btn waves-effect waves-light" type="submit">Post</button>
         </div>

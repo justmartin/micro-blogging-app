@@ -10,6 +10,12 @@ configure(:development) do
   set :database, "sqlite3:micro_blogging_app.sqlite3"
 end
 
+def current_user
+	if session[:user_id]
+		@current_user = User.find(session[:user_id])
+	end
+end
+
 get "/" do
 	erb :index
 end
@@ -44,13 +50,11 @@ post "/sign-up" do
 end
 
 get "/account-settings" do
-	@current_user = User.find(session[:user_id])
 	erb :account_settings
 end
 
 post "/update-account" do
-	@current_user = User.find(session[:user_id])
-	@current_user.update_columns(first_name: params[:first_name], 
+	current_user.update_columns(first_name: params[:first_name], 
 								   						 last_name: params[:last_name], 
 								  						 email: params[:email],
 								   						 password: params[:password])
@@ -58,8 +62,7 @@ post "/update-account" do
 end
 
 post "/delete-account" do
-	@current_user = User.find(session[:user_id])
-	@current_user.destroy
+	current_user.destroy
 	redirect "/"
 end
 
@@ -78,8 +81,7 @@ post "/post-blog" do
 end
 
 get "/profile" do
-	@current_user = User.find(session[:user_id])
-	@posts = @current_user.posts.reverse
+	@posts = current_user.posts.reverse
 	erb :profile
 end
 
