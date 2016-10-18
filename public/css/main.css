@@ -5,3 +5,7 @@ nav {
 .btn, .btn-large {
 	background-color: #967AA1;
 }
+
+.btn:hover, .btn-large:hover{
+	background-color: #D5C6E0;
+}

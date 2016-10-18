@@ -2,25 +2,35 @@
 <html>
 <head>
 	<title>Profile</title>
+	<link rel="stylesheet" type="text/css" href="css/home.css">
 </head>
 <body>
+<div class="container center-align">
 
 	<div class="row">
-		<%= @user.first_name + " " + @user.last_name %>
-		<br>
-		<%= @user.email %>
+		<h3><%= @user.first_name + " " + @user.last_name %></h3>
+		<h5><%= @user.email %></h5>
 	</div>
 
 	<div class="row">
-		<% @posts.each do |post| %>
-	    Title: <%= post.title %>
-	    <br>
-	    Created At: <%= post.created_at %>
-	    <br>
-	    Message: <%= post.message %>
-		<% end %>
+		<div class="col s12">
+			<% @posts.each do |post| %>
+		    <div class="card card-color">
+		      <div class="card-content card-text-color">
+		        <span class="card-title"><%= post.title %></span>
+		          <div>
+		            Created At: <%= post.created_at %>
+		            <br> 
+		            <%= post.message %>
+		          </div>
+		          <br>
+		      </div>
+		    </div>
+		  <% end %>
+	  </div>
 	</div>
 
+</div>
 </body>
 </html>
 

@@ -61,7 +61,7 @@ Posts table
 	#967AA1 - dark purple
 	#AAA1C8 - light purple
 	#D5C6E0 - lighter purple
-	#F5E6E8 - 
+	#F5E6E8 - tan
 
 
 

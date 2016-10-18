@@ -2,40 +2,52 @@
 <html>
 <head>
 	<title>My Account</title>
+	<link rel="stylesheet" type="text/css" href="css/account_settings.css">
 </head>
 <body>
+	<div class="container">
 
-	<form method="post" action="/update-account" class="col s12">
-		<div class="row">
-			<div class="input-field col s6">
-				<label for="first_name">First Name</label>
-				<input name="first_name" type="text" class="validate" placeholder="<%= @current_user.first_name %>">
- 			</div>
-
-			<div class="input-field col s6">
-				<label for="last_name">Last Name</label>
-				<input name="last_name" type="text" class="validate" placeholder="<%= @current_user.last_name %>">
-			</div>
+		<div class="row center-align">
+			<h3>Account Settings</h3>
+			<p>Feel free to update!</p>
 		</div>
 
-		<div class="row">
-			<div class="input-field col s6">
-				<label for="email">Email</label>
-				<input name="email" type="email" class="validate" placeholder="<%= @current_user.email %>">
-			</div>
+		<div id="account-form" class="row center-align">
+			<form method="post" action="/update-account" class="col s12 center-align">
+				<div class="row">
+					<div class="input-field col s6">
+						<label for="first_name">First Name</label>
+						<input name="first_name" type="text" class="validate" placeholder="<%= @current_user.first_name %>" required>
+		 			</div>
 
-			<div class="input-field col s6">
-				<label for="password">Password</label>
-				<input name="password" type="password" class="validate" placeholder="<%= @current_user.password %>">
-			</div>
+					<div class="input-field col s6">
+						<label for="last_name">Last Name</label>
+						<input name="last_name" type="text" class="validate" placeholder="<%= @current_user.last_name %>" required>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="input-field col s6">
+						<label for="email">Email</label>
+						<input name="email" type="email" class="validate" placeholder="<%= @current_user.email %>" required>
+					</div>
+
+					<div class="input-field col s6">
+						<label for="password">Password</label>
+						<input name="password" type="password" class="validate" placeholder="<%= @current_user.password %>" required>
+					</div>
+				</div>
+
+			  <button class="btn waves-effect waves-light" type="submit">Update Account</button>
+			</form>
 		</div>
 
-	  <button class="btn waves-effect waves-light" type="submit">Update Account</button>
-	</form>
+		<div id="delete-form" class="row center-align">
+			<form method="post" action="/delete-account" class="col s12">
+			  <button class="btn waves-effect waves-light" type="submit">Delete Account</button>
+			</form>
+		</div>
 
-	<form method="post" action="/delete-account" class="col s12">
-	  <button class="btn waves-effect waves-light" type="submit">Delete Account</button>
-	</form>
-
+	</div>
 </body>
 </html>
