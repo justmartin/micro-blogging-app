@@ -2,11 +2,13 @@
 <html>
 <head>
 	<title>Home</title>
+  <link rel="stylesheet" type="text/css" href="css/home.css">
 </head>
 <body>
 
   <div class="row">
-    <div class="col s4">
+
+    <div class="col s2">
       <h4>Users</h4>
       <ul>
         <% @users.each do |user| %>
@@ -15,41 +17,43 @@
       </ul>
     </div>
 
-    <h4>Post New Blog</h4>
-    <form method="post" action="/post-blog" class="col s8">
-      <div class="row">
-        <div class="input-field col s8">
+    <form method="post" action="/post-blog" class="col s5">
+       <h4>Post New Blog</h4>
+
+        <div class="input-field col s9">
           <label for="title">Title</label>
           <input name="title" type="text" class="validate" maxlength="50">
         </div>
-      </div>
 
-      <div class="row">
-        <div class="input-field col s8">
+        <div class="input-field col s9">
           <label for="message">Message</label>
           <textarea name="message" type="text" class="materialize-textarea" maxlength="150" length="150"></textarea>
+
+          <button class="btn waves-effect waves-light" type="submit">Post</button>
         </div>
-      </div>
-
-      <button class="btn waves-effect waves-light" type="submit">Post</button>
     </form>
-  </div>
 
-  <div class="row">
-    <h4>Feed</h4>
-
-    <% @posts.take(10).each do |post| %>
-      <div>
-        Title: <%= post.title %>
-        <br>
-        Created By: <%= post.user.first_name %>
-        <br>
-        Created At: <%= post.created_at %>
-        <br>
-        Message: <%= post.message %>
-      </div>
-      <br>
-    <% end %>
+    <div class="col s5">
+      <h4>Feed</h4>
+      <% @posts.take(10).each do |post| %>
+        <div class="card card-color">
+          <div class="card-content card-text-color">
+            <span class="card-title"><%= post.title %></span>
+              <div>
+                Created By: <%= post.user.first_name %>
+                <br>
+                Created At: <%= post.created_at %>
+                <br> 
+                <%= post.message %>
+              </div>
+              <br>
+          </div>
+          <div class="card-action">
+            <a href="#">Delete</a>
+          </div>
+        </div>
+      <% end %>
+    </div>
 
   </div>
 
