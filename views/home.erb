@@ -13,7 +13,7 @@
       <h4>Users</h4>
       <ul>
         <% @users.each do |user| %>
-          <a href="/<%= user.id %>"><li><%= user.first_name + " " + user.last_name %></li></a>
+          <a href="/<%= user.id %>"><li><%= user.full_name %></li></a>
         <% end %>
       </ul>
     </div>
@@ -43,7 +43,7 @@
               <div>
                 Created By: <%= post.user.first_name %>
                 <br>
-                Created At: <%= post.created_at %>
+                Created At: <%= post.custom_created_at %>
                 <br> 
                 <%= post.message %>
               </div>
